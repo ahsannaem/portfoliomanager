@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="glassy-card">
+<h2 class="h1 text-center my-12 ">Login</h2>
+<div class="container">
+<form method="post" class="form-group d-flex flex-column justify-content-center">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-dark m-2" type="submit">Login</button>
+</form>
+</div>
+</div>
+{% endblock %}

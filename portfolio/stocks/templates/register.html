@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="my-8">Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="form-group">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            {{ form.username.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {{ form.email.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+            {{ form.password1.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+            {{ form.password2.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.category.label_tag }}
+            {{ form.category }}
+            {{ form.category.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.age.label_tag }}
+            {{ form.age }}
+            {{ form.age.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.emergency_funds.label_tag }}
+            {{ form.emergency_funds }}
+            {{ form.emergency_funds.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.investment_percentage.label_tag }}
+            {{ form.investment_percentage }}
+            {{ form.investment_percentage.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.high_reture_high_risk.label_tag }}
+            {{ form.high_reture_high_risk }}
+            {{ form.high_reture_high_risk.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.expected_return_rate.label_tag }}
+            {{ form.expected_return_rate }}
+            {{ form.expected_return_rate.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.keep_capital_safe.label_tag }}
+            {{ form.keep_capital_safe }}
+            {{ form.keep_capital_safe.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.annual_take_home_income.label_tag }}
+            {{ form.annual_take_home_income }}
+            {{ form.annual_take_home_income.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.worry_if_fall_percentage.label_tag }}
+            {{ form.worry_if_fall_percentage }}
+            {{ form.worry_if_fall_percentage.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.current_life_stage.label_tag }}
+            {{ form.current_life_stage }}
+            {{ form.current_life_stage.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.investment_familiarity.label_tag }}
+            {{ form.investment_familiarity }}
+            {{ form.investment_familiarity.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.investment_length.label_tag }}
+            {{ form.investment_length }}
+            {{ form.investment_length.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.work_status.label_tag }}
+            {{ form.work_status }}
+            {{ form.work_status.errors }}
+        </div>
+        <div class="form-group">
+            {{ form.critical_situation_response.label_tag }}
+            {{ form.critical_situation_response }}
+            {{ form.critical_situation_response.errors }}
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+{% endblock %}

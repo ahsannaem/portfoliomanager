@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.img {
+        background-image: url("../2151305340.jpg");
+        background-size: cover;
+    backdrop-filter:blur(100px);
+
+
+    }
+.blur{
+}
+
+
+.glassy-card {
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    color:black;
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Change card color on hover */
+.glassy-card:hover {
+    background: rgba(255, 255, 255, 0.7); /* Lighter semi-transparent white background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow size */
+}

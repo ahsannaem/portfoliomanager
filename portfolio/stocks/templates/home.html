@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <h2 class="my-4">Stock Holdings</h2>
+    <button class="btn btn-outline-success m-2" type="button">
+        <a href="{% url 'add_stock' %}" class="nav-link p-0">Add Stock</a>
+    </button>
+</div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Portfolio</th>
+                <th>Company Symbol</th>
+                <th>Company Name</th>
+                <th>Sector</th>
+                <th>Number of Shares</th>
+                <th>Investment Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for holding in stockholdings %}
+            <tr>
+                <td>{{ holding.portfolio }}</td>
+                <td>{{ holding.company_symbol }}</td>
+                <td>{{ holding.company_name }}</td>
+                <td>{{ holding.sector }}</td>
+                <td>{{ holding.number_of_shares }}</td>
+                <td>{{ holding.investment_amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
